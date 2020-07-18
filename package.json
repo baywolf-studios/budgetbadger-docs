@@ -19,6 +19,11 @@
     "@angular/platform-browser": "~10.0.4",
     "@angular/platform-browser-dynamic": "~10.0.4",
     "@angular/router": "~10.0.4",
+    "@spectrum-css/button": "^3.0.0-beta.3",
+    "@spectrum-css/icon": "^2.1.1",
+    "@spectrum-css/page": "^2.0.7",
+    "@spectrum-css/typography": "^2.1.3",
+    "@spectrum-css/vars": "^2.3.0",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
