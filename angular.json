@@ -117,8 +117,13 @@
               "devServerTarget": "budgetbadger-docs:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "budgetbadger-docs"
 }
