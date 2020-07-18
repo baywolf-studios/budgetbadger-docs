@@ -31,6 +31,7 @@
               "node_modules/@spectrum-css/typography/dist/index-vars.css",
               "node_modules/@spectrum-css/icon/dist/index-vars.css",
               "node_modules/@spectrum-css/button/dist/index-vars.css",
+              "node_modules/@spectrum-css/sidenav/dist/index-vars.css",
               "src/styles.css"
             ],
             "scripts": []
