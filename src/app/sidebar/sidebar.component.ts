@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DocService} from '../doc.service';
+import { Doc } from 'src/doc';
 
 @Component({
   selector: 'app-sidebar',
@@ -8,9 +9,17 @@ import {DocService} from '../doc.service';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor(private docservice: DocService) { }
+  docs: Doc[];
+
+  constructor(private docService: DocService) { }
 
   ngOnInit(): void {
+    console.log('TEST');
+    this.getDocs();
+  }
+
+  getDocs(): void {
+    this.docService.getDocs().subscribe(docs => this.docs = docs);
   }
 
 }
