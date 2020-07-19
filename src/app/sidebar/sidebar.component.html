@@ -1,7 +1,7 @@
 <nav>
     <ul class="spectrum-SideNav">
       <li class="spectrum-SideNav-item" *ngFor="let doc of docs">
-        <span class="spectrum-SideNav-itemLink">{{doc.title}}</span>
+        <a routerLink="/{{doc.path}}" class="spectrum-SideNav-itemLink">{{doc.title}}</a>
       </li>
     </ul>
   </nav>
