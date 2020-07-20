@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { DocService } from '../doc.service';
 
 @Component({
   selector: 'app-docview',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DocviewComponent implements OnInit {
 
-  constructor() { }
+  docJson: string;
+
+  constructor(
+    private route: ActivatedRoute,
+    private docService: DocService) { }
 
   ngOnInit(): void {
+    const path = this.route.snapshot.paramMap.get('path');
+    this.docJson = this.docService.getDocumentSource(path);
   }
 
 }

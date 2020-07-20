@@ -21,6 +21,10 @@ export class DocService {
       );
   }
 
+  getDocumentSource(path: string): string {
+    return './assets/' + path + '.md';
+  }
+
   /**
    * Handle Http operation that failed.
    * Let the app continue.
