@@ -14,7 +14,40 @@ export function markedOptionsFactory(): MarkedOptions {
  
   renderer.heading = (text: string, level: number) => {
     console.log('header' + level);
-    return '<h' + level + ' class="spectrum-Heading spectrum-Heading--XXXL">' + text + '</h' + level + '>';
+
+    let adobeClass: string;
+    switch(level) { 
+      case 1: { 
+        adobeClass = 'spectrum-Heading spectrum-Heading--XL';
+        break; 
+      } 
+      case 2: { 
+        adobeClass = 'spectrum-Heading spectrum-Heading--L';
+        break; 
+      } 
+      case 3: { 
+        adobeClass = 'spectrum-Heading spectrum-Heading--M';
+        break; 
+      } 
+      case 4: { 
+        adobeClass = 'spectrum-Heading spectrum-Heading--S';
+        break; 
+      } 
+      case 5: {
+        adobeClass = 'spectrum-Heading spectrum-Heading--XS'; 
+        break; 
+      } 
+      case 6: { 
+        adobeClass = 'spectrum-Heading spectrum-Heading--XXS';
+        break; 
+      } 
+      default: { 
+        adobeClass = 'spectrum-Heading';
+        break; 
+      }
+    }
+
+    return `<h${level} class="${adobeClass}">${text}</h${level}>`;
   }
  
   return {
