@@ -50,6 +50,18 @@ export function markedOptionsFactory(): MarkedOptions {
     return `<h${level} class="${adobeClass}">${text}</h${level}>`;
   }
  
+  renderer.blockquote = (quote: string) => {
+    return `<blockquote class="spectrum-Well">${quote}</blockquote>`;
+  }
+
+  renderer.paragraph = (text: string) => {
+    return `<p class="spectrum-Body spectrum-Body--M">${text}</p>`
+  }
+
+  renderer.hr = () => {
+    return '<hr class="spectrum-Rule spectrum-Rule--large"></hr>';
+  }
+
   return {
     renderer: renderer
   };
