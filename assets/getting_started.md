@@ -1,37 +1,86 @@
-An h1 header
-============
+# Markdown Cheat Sheet
 
-***
+Thanks for visiting [The Markdown Guide](https://www.markdownguide.org)!
 
-Paragraphs are separated by a blank line.
+This Markdown cheat sheet provides a quick overview of all the Markdown syntax elements. It can’t cover every edge case, so if you need more information about any of these elements, refer to the reference guides for [basic syntax](https://www.markdownguide.org/basic-syntax) and [extended syntax](https://www.markdownguide.org/extended-syntax).
 
-2nd paragraph. *Italic*, **bold**, and `monospace`. Itemized lists
-look like:
+## Basic Syntax
 
-  * this one
-  * that one
-  * the other one
+These are the elements outlined in John Gruber’s original design document. All Markdown applications support these elements.
 
-Note that --- not considering the asterisk --- the actual text
-content starts at 4-columns in.
+### Heading
 
-> Block quotes are
-> written like so.
->
-> They can span multiple paragraphs,
-> if you like.
+# H1
+## H2
+### H3
 
-Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex., "it's all
-in chapters 12--14"). Three dots ... will be converted to an ellipsis.
-Unicode is supported. ☺
+### Bold
 
+**bold text**
 
+### Italic
 
-An h2 header
-------------
+*italicized text*
 
-Here's a numbered list:
+### Blockquote
 
- 1. first item
- 2. second item
- 3. third item
+> blockquote
+
+### Ordered List
+
+1. First item
+2. Second item
+3. Third item
+
+### Unordered List
+
+- First item
+- Second item
+- Third item
+
+### Code
+
+`code`
+
+### Horizontal Rule
+
+---
+
+### Link
+
+[title](https://www.example.com)
+
+### Image
+
+![alt text](https://budgetbadger.io/wp-content/uploads/2019/05/cropped-BudgetBadgerFavIcon-192x192.png)
+
+## Extended Syntax
+
+These elements extend the basic syntax by adding additional features. Not all Markdown applications support these elements.
+
+### Table
+
+| Syntax | Description | Syntax | Description |
+| :----------- | :----------- | :----------- | :----------- |
+| Header | Title | Header | Title |
+| Paragraph | Text | Paragraph | Text |
+| Header | Title | Header | Title |
+| Paragraph | Text | Paragraph | Text |
+| Header | Title | Header | Title |
+| Paragraph | Text | Paragraph | Text |
+| Header | Title | Header | Title |
+| Paragraph | Text | Paragraph | Text |
+
+### Fenced Code Block
+
+```
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+```
+
+### Strikethrough
+
+~~The world is flat.~~
