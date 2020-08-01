@@ -34,6 +34,8 @@
               "node_modules/@spectrum-css/sidenav/dist/index-vars.css",
               "node_modules/@spectrum-css/well/dist/index-vars.css",
               "node_modules/@spectrum-css/rule/dist/index-vars.css",
+              "node_modules/@spectrum-css/table/dist/index-vars.css",
+              "node_modules/@spectrum-css/link/dist/index-vars.css",
               "src/styles.css"
             ],
             "scripts": [

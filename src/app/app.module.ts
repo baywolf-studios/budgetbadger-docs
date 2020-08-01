@@ -51,7 +51,7 @@ export function markedOptionsFactory(): MarkedOptions {
   }
  
   renderer.blockquote = (quote: string) => {
-    return `<blockquote class="spectrum-Well">${quote}</blockquote>`;
+    return `<div class="spectrum-Well">${quote}</div>`;
   }
 
   renderer.paragraph = (text: string) => {
@@ -60,6 +60,39 @@ export function markedOptionsFactory(): MarkedOptions {
 
   renderer.hr = () => {
     return '<hr class="spectrum-Rule spectrum-Rule--large"></hr>';
+  }
+
+  renderer.code = (code: string, language: string, isEscaped: boolean) => {
+    return `<pre class="spectrum-Well"><code class="spectrum-Code spectrum-Code--M">${code}</code></pre>`;
+  }
+
+  renderer.codespan = (code:string) => {
+    return `<pre class="spectrum-Well"><code class="spectrum-Code spectrum-Code--M">${code}</code></pre>`;
+  }
+
+  renderer.link = (href: string, title: string, text: string) => {
+    return `<a href="${href}" class="spectrum-Link">${text}</a>`
+  }
+
+  renderer.table = (header: string, body: string) => {
+    return `<table class="spectrum-Table"><thead class="spectrum-Table-head">${header}</thead><tbody class="spectrum-Table-body">${body}</tbody></table>`;
+  }
+
+  renderer.tablerow = (content: string) => {
+    return `<tr class="spectrum-Table-row">${content}</tr>`;
+  }
+
+  renderer.tablecell = (content: string, flags) => {
+    if (flags.header) {
+      return `<th align="${flags.align}" class="spectrum-Table-headCell">${content}</th>`;
+    }
+    else {
+      return `<td align="${flags.align}" class="spectrum-Table-cell">${content}</td>`;
+    }
+  }
+
+  renderer.listitem = (text: string) => {
+    return `<li class="spectrum-Body spectrum-Body--M">${text}</li>`;
   }
 
   return {
